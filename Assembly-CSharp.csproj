@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{A513BC8D-6A7D-D6C5-EEBE-D27CF600D276}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -66,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Assets\ClinderCreate.cs" />
     <Compile Include="Assets\Main.cs" />
+    <Compile Include="Assets\PipesRotation.cs" />
     <Compile Include="Assets\RandomCubePosition.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/2019.4.13f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -623,7 +625,9 @@
       <HintPath>F:/SStudioProject/Test/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
