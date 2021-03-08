@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Pipe[tf1] : MonoBehaviour
+{
+    private Transform tf;
+    int stage = 1;
+    void Start()
+    {
+        tf = GetCompoment<Transform>();
+        tf.transform.Rotate(new Vector3(0, Random.Range(-40.0f, 40.0f), 0));
+    }
+
+    private float OffsetX = 0;
+    public float speed = 1;
+
+    void FixedUpdate()
+    {
+        if (stage == 1)
+        {
+            if (Input.GetKeyDown(KeyCode.Keypad7))
+            {
+                OffsetX = Input.GetAxis("Mouse X");
+                tf.transform.Rotate(new Vector3(0, -OffsetX, 0) * speed);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            stage = 2;
+        }
+    }
+}
