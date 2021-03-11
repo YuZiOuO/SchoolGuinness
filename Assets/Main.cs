@@ -5,13 +5,16 @@ using UnityEngine;
 public class Main : MonoBehaviour
 {
     private Rigidbody rb;
+    private SphereCollider coll;
     private int stage = 1;
     public float speed;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        coll = GetComponent<SphereCollider>();
         rb.useGravity = false;
+        coll.isTrigger = true;
     }
 
     // Update is called once per frame
@@ -42,6 +45,7 @@ public class Main : MonoBehaviour
         {
             stage = 2;
             rb.useGravity = true;
+            coll.isTrigger = false;
             rb.velocity = new Vector3(rb.velocity.x, -10, rb.velocity.z);
         }
     }
